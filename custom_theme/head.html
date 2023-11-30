@@ -1,0 +1,31 @@
+{%- block styles %}
+<link href="{{ 'css/style.css'|url }}" type="text/css" rel="stylesheet" />
+{%- for path in config.extra_css %}
+<link href="{{ path | url }}" rel="stylesheet" />
+{%- endfor %} {%- endblock %}
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: "#0f172a",
+          secondary: "#0db9e9",
+          tertiary: "#1e293b",
+        },
+      },
+    },
+  };
+</script>
+
+{%- block libs %}
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/night-owl.min.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+  hljs.highlightAll();
+</script>
+{%- endblock %}

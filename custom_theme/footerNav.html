@@ -1,0 +1,21 @@
+<div class="flex py-10 justify-between text-white">
+  {%- if page.previous_page %}
+  <a
+    href="{{ page.previous_page.url|url }}"
+    class="px-6 py-3.5 bg-tertiary rounded-lg"
+    title="{{ page.previous_page.title }}"
+    ><span class="icon icon-circle-arrow-left" aria-hidden="true"></span>
+
+    {%- if page.previous_page.url|url == '..' %} Docs Home {%- else %}
+    {{page.previous_page.title}}</a
+  >
+  {%- endif %} {%- endif %} {%- if page.next_page %}
+  <a
+    href="{{ page.next_page.url|url }}"
+    class="px-6 py-3.5 bg-tertiary rounded-lg"
+    title="{{ page.next_page.title }}"
+    >{{page.next_page.title}}
+    <span class="icon icon-circle-arrow-right" aria-hidden="true"></span
+  ></a>
+  {%- endif %}
+</div>

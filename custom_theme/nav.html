@@ -1,0 +1,59 @@
+<nav
+  class="flex w-full items-center justify-between bg-primary text-white p-3 border-solid border-tertiary border-b"
+  style="max-width: 1320px"
+>
+  <!-- Logo -->
+  <div class="w-32">Logo</div>
+  <!-- Search -->
+  <div
+    class="flex-1 bg-primary flex justify-center mx-5 bg-tertiary rounded-md"
+  >
+    {% if 'search' in config.plugins %}
+    <form action="{{base_url}}/search.html" class="w-full">
+      <input
+        type="text"
+        name="q"
+        id="mkdocs-search-query"
+        class="px-5 hidden lg:flex py-2 w-full bg-tertiary border-solid rounded-md border-tertiary border outline-secondary outline-1 ring-0"
+        placeholder="Search deposits docs"
+      />
+    </form>
+    {% endif %}
+  </div>
+  <div class="justify-between gap-10 items-center hidden lg:flex">
+    <div>v0.0.0</div>
+    <div>Icon</div>
+    <div><a href="https://github.com">Github</a></div>
+    <div>
+      <button class="bg-secondary px-4 py-2 rounded-md text-[#212934]">
+        Submit a request
+      </button>
+    </div>
+    <div>
+      <button
+        class="border-secondary border border-outline px-4 py-2 rounded-md text-secondary"
+      >
+        Sign in
+      </button>
+    </div>
+  </div>
+
+  <div class="lg:hidden block" onclick="openSidebar()">
+    <svg
+      focusable="false"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 5H20.359M3 18.186H20.359M3 11.592H20.359"
+        stroke="currentcolor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </div>
+</nav>

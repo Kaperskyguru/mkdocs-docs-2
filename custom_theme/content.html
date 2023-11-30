@@ -1,0 +1,24 @@
+<main
+  class="flex-1 h-full lg:px-8 px-0 pb-8"
+  style="max-width: cal(100% - 280px)"
+>
+  {% include "breadcrumb.html" %}
+  <div class="text-white pt-6">
+    <h1 class="text-4xl font-bold py-3">{{page.title}}</h1>
+  </div>
+
+  <div>
+    <article class="leading-6">{{page.content}}</article>
+  </div>
+
+  {% include "footerNav.html" %}
+
+  <div class="border-t py-10 flex justify-end">
+    <p class="text-gray-500 leading-5">
+      This page was last updated on {%- if
+      page.meta.git_site_revision_date_localized_raw_date %}
+      {{page.meta.git_site_revision_date_localized_raw_date}} {%- else %}
+      'Install and activate "git-revision-date-localized" plugin' {%- endif %}
+    </p>
+  </div>
+</main>

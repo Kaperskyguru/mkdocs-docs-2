@@ -1,0 +1,18 @@
+<div class="flex gap-2 text-gray-500">
+  <p>
+    <a href="{{ nav.homepage.url|url }}" aria-label="Docs Home">Docs Home</a>
+  </p>
+  / {%- if page %} {%- if page.previous_page.url|url != '..'%} {%- for doc in
+  page.ancestors[::-1] %} {%- if doc.url %}
+  <p>
+    <a href="{{ doc.url|url }}">{{ doc.title }}</a>
+  </p>
+  {%- else %}
+  <p>
+    <a href="{{ page.previous_page.url|url }}">{{ doc.title }}</a>
+  </p>
+
+  / {%- endif %} {%- endfor %} {%- endif %}
+  <p class="text-white">{{ page.title }}</p>
+  {%- endif %}
+</div>
