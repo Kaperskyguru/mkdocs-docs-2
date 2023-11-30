@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Introduction - My Docs
+    </title>
+
+    
+<link href="../../css/style.css" type="text/css" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: "#0f172a",
+          secondary: "#0db9e9",
+          tertiary: "#1e293b",
+        },
+      },
+    },
+  };
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/night-owl.min.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+  hljs.highlightAll();
+</script>
+  </head>
+  <body>
+    <div class="bg-primary h-full">
+      <div class="mx-auto h-full px-8 xl:px-0" style="max-width: 1320px">
+        <nav
+  class="flex w-full items-center justify-between bg-primary text-white p-3 border-solid border-tertiary border-b"
+  style="max-width: 1320px"
+>
+  <!-- Logo -->
+  <div class="w-32">Logo</div>
+  <!-- Search -->
+  <div
+    class="flex-1 bg-primary flex justify-center mx-5 bg-tertiary rounded-md"
+  >
+    
+    <form action="../../search.html" class="w-full">
+      <input
+        type="text"
+        name="q"
+        id="mkdocs-search-query"
+        class="px-5 hidden lg:flex py-2 w-full bg-tertiary border-solid rounded-md border-tertiary border outline-secondary outline-1 ring-0"
+        placeholder="Search deposits docs"
+      />
+    </form>
+    
+  </div>
+  <div class="justify-between gap-10 items-center hidden lg:flex">
+    <div>v0.0.0</div>
+    <div>Icon</div>
+    <div><a href="https://github.com">Github</a></div>
+    <div>
+      <button class="bg-secondary px-4 py-2 rounded-md text-[#212934]">
+        Submit a request
+      </button>
+    </div>
+    <div>
+      <button
+        class="border-secondary border border-outline px-4 py-2 rounded-md text-secondary"
+      >
+        Sign in
+      </button>
+    </div>
+  </div>
+
+  <div class="lg:hidden block" onclick="openSidebar()">
+    <svg
+      focusable="false"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 5H20.359M3 18.186H20.359M3 11.592H20.359"
+        stroke="currentcolor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </div>
+</nav>
+
+        <div class="flex pt-20 relative">
+          <aside
+  id="sidebar"
+  class="w-full hidden w-full lg:block top-[65px] sticky overflow-y-auto border-r-2 border-solid border-tertiary"
+  style="max-width: 250px; height: calc(100vh - 80px); min-width: 280px"
+>
+  <nav class="px-3">
+    <ul id="mainmenu" class="text-white rounded-lg text-lg">
+      <li>
+        <a
+          href="/"
+          class="flex items-center gap-3 px-2 py-3 hover:bg-tertiary rounded-lg"
+        >
+          <div>
+            <img
+              src="https://docs.deposits.dev/assets/svgs/sidebar/docs_home.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <p>Docs Home</p>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-2 py-3 hover:bg-tertiary rounded-lg"
+        >
+          <div>
+            <img
+              src="https://docs.deposits.dev/assets/svgs/sidebar/api_reference.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <p>API References</p>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-2 py-3 hover:bg-tertiary rounded-lg"
+        >
+          <div>
+            <img
+              src="https://docs.deposits.dev/assets/svgs/sidebar/ui_kit.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <p>UI Kit</p>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-2 py-3 hover:bg-tertiary rounded-lg"
+        >
+          <div>
+            <img
+              src="https://docs.deposits.dev/assets/svgs/sidebar/recipes.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <p>Guides</p>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-2 py-3 hover:bg-tertiary rounded-lg"
+        >
+          <div>
+            <img
+              src="https://docs.deposits.dev/assets/svgs/sidebar/references.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <p>Glossary</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="my-8 py-2 text-white">
+    <h2 class="uppercase font-bold text-base">
+      <a href="/getting-started">Getting Started</a>
+    </h2>
+    <div class="flex flex-col text-base">
+      <a href="/getting-started/introduction" class="py-1">Introduction</a>
+      <a href="/getting-started/key-terms" class="py-1">Key Terms</a>
+      <a href="#" class="py-1">Environments</a>
+      <a href="#" class="py-1">Authentication</a>
+      <a href="#" class="py-1">Testing</a>
+      <a href="#" class="py-1">Errors</a>
+    </div>
+  </div>
+
+  <div class="my-8 text-white">
+    <h2 class="uppercase py-2 font-bold text-base">
+      <a href="/services">Services</a>
+    </h2>
+    <div class="flex flex-col text-base">
+      <a href="/services/email-receipts" class="py-1">Email Receipts</a>
+      <a href="#" class="py-1">Webhooks</a>
+    </div>
+  </div>
+
+  <div class="my-8 text-white">
+    <h2 class="uppercase py-2 font-bold text-base">Libraries & SDKs</h2>
+    <div class="flex flex-col text-base">
+      <a href="#" class="py-1">E-Commerce</a>
+      <a href="#" class="py-1">One-Click Pay</a>
+      <a href="#" class="py-1">Payouts</a>
+      <a href="#" class="py-1">Balance</a>
+    </div>
+  </div>
+
+  <div class="text-white">
+    <h2 class="uppercase py-2 font-bold text-base">Use Cases</h2>
+    <div class="flex flex-col text-base">
+      <a href="#" class="py-1">Overview</a>
+      <a href="#" class="py-1">Digital Banking</a>
+      <a href="#" class="py-1">Invoice Management System</a>
+      <a href="#" class="py-1">Donations Engine</a>
+      <a href="#" class="py-1">International Remittance</a>
+      <a href="#" class="py-1">Challenger Bank</a>
+    </div>
+  </div>
+</aside>
+          <!-- Include Content -->
+          <main
+  class="flex-1 h-full lg:px-8 px-0 pb-8"
+  style="max-width: cal(100% - 280px)"
+>
+  <div class="flex gap-2 text-gray-500">
+  <p>
+    <a href="../.." aria-label="Docs Home">Docs Home</a>
+  </p>
+  /
+  <p>
+    <a href="../">Getting started</a>
+  </p>
+
+  /
+  <p class="text-white">Introduction</p>
+</div>
+  <div class="text-white pt-6">
+    <h1 class="text-4xl font-bold py-3">Introduction</h1>
+  </div>
+
+  <div>
+    <article class="leading-6"><p>You want to build a digital bank, grow a tech business, and hit your revenue
+goals.</p>
+<p>Your users want a stress-free movement of money for personal or business
+reasons. They also want a list of benefits too:</p>
+<ul>
+<li>24/7 access to money in the account, with full financial visibility</li>
+<li>Ability to operate the account at any time, from any place, on the go</li>
+<li>Great UI/UX/CX.</li>
+<li>No fees for spending or transferring money abroad</li>
+<li>Beyond average fraud and identity protection.</li>
+</ul>
+<p>At Deposits, we provide world-class banking infrastructure for our clients. We
+take care of the heavy lifting for you so you can focus on creating a product
+that delights your users.</p>
+<p>Traditional banking already offers a shortlist of functions, but currently
+lacks the benefits to match the tastes and use cases modern banking customers
+expect.</p>
+<p>This is where your partnership with Deposits becomes the leverage you can bank
+on.</p>
+<p><strong>What do you need to launch and operate a Bank these days:</strong></p>
+<ul>
+<li>Banking licenses coverage</li>
+<li>KYC / AML &amp; Fraud prevention</li>
+<li>Ledgers and reconciliation</li>
+<li>Secure datastore</li>
+<li>Partnerships</li>
+<li>Web / iOS / Android applications</li>
+<li>Payment gateway</li>
+<li>Dedicated technical support</li>
+</ul>
+<p>With Deposits, partners can go live faster than ever before by leveraging our
+3rd party licenses, certifications, microservices, and API infrastructure. Our
+API
+<a href="https://docs.deposits.dev/">documentation</a>
+is here to help you get from A to B in no time at all.</p>
+<h2 id="building-your-bank">Building your bank</h2>
+<p><img
+    src="https://1603381330-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-Mctw3M_RZOCGzqZkID_-4045043681%2Fuploads%2FRQE6gapxweDWU1aUTQQC%2FImage%20from%20iOS%20(2).jpg?alt=media&token=500b6f68-3599-400d-884f-715894047385"
+    alt="diagram showing building your bank with deposits"
+  /></p>
+<h3 id="creating-and-verifying-your-customers">Creating and Verifying your Customers</h3>
+<p>The first thing you would want to do when you are opening a bank account for
+an individual or business would be to create a new customer. These customers
+could either be individual users or businesses. The steps taken to open
+accounts for these different types of customers would vary. Let&apos;s start
+with opening an account for an individual.</p>
+<h3 id="creating-an-account-for-an-individual">Creating an Account for an Individual</h3>
+<p>To create an account for an individual, you need to collect basic information
+such as their first and last names, email address, and physical address of the
+user. These are the fields required to have on a user. They are also needed to
+create a user with us.</p>
+<p>Our API documentation provides the necessary information needed to create a
+new user. After you create a new user, a lot of information is returned and a
+response similar to this is returned:</p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;message&quot;: &quot;Account created successful.&quot;,
+  &quot;data&quot;: {
+    &quot;user&quot;: {
+      &quot;first_name&quot;: &quot;Fred&quot;,
+      &quot;last_name&quot;: &quot;Williams&quot;,
+      &quot;username&quot;: &quot;f_williams&quot;,
+      &quot;email&quot;: &quot;customer@email.com&quot;,
+      &quot;id&quot;: 612
+    },
+    &quot;wallet&quot;: 0
+  }
+}
+</code></pre>
+<h3 id="creating-an-account-for-a-business">Creating an Account for a Business</h3>
+<p>Understandably, more information is needed to create an account for a business
+than is needed for an individual. You would need</p>
+<p>The name of the business
+Business address
+Date of incorporation
+means of identifying this business as a legal entity.</p>
+<p>The methods of verification that are currently supported are DUNS and Employer
+Identification Number (EIN).</p>
+<h3 id="verifying-your-customers">Verifying your Customers</h3>
+<p>In banking, it&apos;s important to verify the identities of individuals and
+ensure that these customers are who they say they are.</p>
+<p>To help with this, we have a standalone product, KYSync.</p>
+<p>KYSync allows you to pass the information you have previously collected from
+your customer and run a couple of checks on that customer to verify their
+identity.</p>
+<p>This system of verification is currently only available within the US. To
+verify a user, you would need their Social Security Number (SSN) alongside
+their base information.</p>
+<p>This information is then passed across to KYSync and a response is received
+showing if the customer is who they say they are or not.</p>
+<p>The time taken to verify customers varies depending on the type of entity.</p>
+<p>To verify an individual, you can call this endpoint. You will get a response
+similar to this:</p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;message&quot;: &quot;Account created successful.&quot;,
+  &quot;data&quot;: {
+    &quot;user&quot;: {
+      &quot;first_name&quot;: &quot;Fred&quot;,
+      &quot;last_name&quot;: &quot;Williams&quot;,
+      &quot;username&quot;: &quot;f_williams&quot;,
+      &quot;email&quot;: &quot;customer@email.com&quot;,
+      &quot;id&quot;: 612
+    },
+    &quot;wallet&quot;: 0
+  }
+}
+</code></pre>
+<h2 id="storing-value">Storing value</h2>
+<p>The way value is stored is through wallets. Deposits automatically creates a
+ledger for each new user upon creation. The balance in the user&apos;s account
+is stored in a wallet and the transaction history is readily available for the
+individuals to upon request.</p>
+<h2 id="collecting-payments">Collecting Payments</h2>
+<p>There are various ways you can receive payments from users on the platform.
+They include:</p>
+<ul>
+<li>Via Deposits Payment Pages</li>
+<li>Via Bank Account</li>
+<li>Via Card</li>
+</ul>
+<h3 id="via-deposits-payment-pages">via Deposits Payment pages</h3>
+<p>Our payment pages automatically generate invoices and allow you receive
+payments. This is the recommended way to get payments from users. You can
+create a payment page by calling this endpoint.</p>
+<p>A sample body passed along with the request would look like:</p>
+<pre><code class="language-json">{
+  &quot;api_key&quot;: &quot;KwjqFjcvQxUHczQJ&quot;,
+  &quot;user_id&quot;: &quot;34521&quot;,
+  &quot;name&quot;: &quot;Swift Technologies&quot;,
+  &quot;description&quot;: &quot;Get the very best technology at swift technologies&quot;,
+  &quot;items&quot;: [
+    {
+      &quot;name&quot;: &quot;msi Optix AG32CQ&quot;,
+      &quot;description&quot;: &quot;msi 32in curved monitor&quot;,
+      &quot;amount&quot;: 450.0,
+      &quot;quantity&quot;: 1
+    }
+  ]
+}
+</code></pre>
+<p>This will return a response similar to this:</p>
+<pre><code class="language-json">{
+  &quot;status&quot;: &quot;success&quot;,
+  &quot;message&quot;: &quot;Payment Page saved&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 7,
+    &quot;client_id&quot;: &quot;7&quot;,
+    &quot;user_id&quot;: &quot;34521&quot;,
+    &quot;name&quot;: &quot;Swift Technologies&quot;,
+    &quot;description&quot;: &quot;Get the very best technology at swift technologies&quot;,
+    &quot;amount&quot;: 450.0,
+    &quot;paid_at&quot;: null,
+    &quot;extra_info&quot;: null,
+    &quot;payment_type&quot;: null,
+    &quot;payment_interval&quot;: null,
+    &quot;payment_key&quot;: &quot;a306248c72ce4ad&quot;,
+    &quot;total&quot;: &quot;450.00&quot;,
+    &quot;status&quot;: &quot;active&quot;,
+    &quot;created_at&quot;: &quot;2021-08-25T14:33:08.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2021-08-25T14:33:08.000000Z&quot;,
+    &quot;link&quot;: &quot;https://api.deposits.dev/payment_page/cafecito/88497ae7d640e5a&quot;,
+    &quot;items&quot;: [
+      {
+        &quot;id&quot;: 9,
+        &quot;client_id&quot;: &quot;7&quot;,
+        &quot;payment_page_id&quot;: &quot;7&quot;,
+        &quot;name&quot;: &quot;msi Optix AG32CQ&quot;,
+        &quot;description&quot;: &quot;msi 32in curved monitor&quot;,
+        &quot;amount&quot;: &quot;450.00&quot;,
+        &quot;quantity&quot;: &quot;1&quot;,
+        &quot;status&quot;: &quot;active&quot;,
+        &quot;created_at&quot;: &quot;2021-08-25T14:33:08.000000Z&quot;,
+        &quot;updated_at&quot;: &quot;2021-08-25T14:33:08.000000Z&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<h3 id="via-bank-account">via Bank Account</h3>
+<p>You may initiate a request to debit a bank account. If this is successful, the
+user who initiated the request would have their wallet topped up with the
+amount passed in.</p>
+<h3 id="via-card">via Card</h3>
+<p>You may initiate a request to debit a card account. If this is successful, the
+user who initiated the request would have their wallet topped up with the
+amount passed in.</p></article>
+  </div>
+
+  <div class="flex py-10 justify-between text-white">
+  <a
+    href="../"
+    class="px-6 py-3.5 bg-tertiary rounded-lg"
+    title="Getting Started"
+    ><span class="icon icon-circle-arrow-left" aria-hidden="true"></span>
+    Getting Started</a
+  >
+</div>
+
+  <div class="border-t py-10 flex justify-end">
+    <p class="text-gray-500 leading-5">
+      This page was last updated on
+      November 30, 2023
+    </p>
+  </div>
+</main>
+
+          <!-- Include TOC -->
+          
+<div class="pl-2 lg:w-1/5 w-full">
+  <aside
+    id="right"
+    class="w-full lg:block top-[65px] sticky overflow-y-auto"
+    style="max-width: 250px; height: calc(100vh - 80px); min-width: 280px"
+  >
+    <div id="right-scroll" class="relative text-white pt-3 relative pl-8">
+      <div class="absolute h-4 w-1.5 bg-secondary left-0 top-2 z-40"></div>
+      <h2 class="uppercase font-bold leading-5 text-sm text-[#e99e9]">
+        On this page
+      </h2>
+      <div class="flex flex-col text-base pl-3 pt-3 leading-5">
+        
+        <a class="py-1" href="#building-your-bank">Building your bank</a>
+        
+        <a class="py-1 pl-3" href="#creating-and-verifying-your-customers">Creating and Verifying your Customers</a>
+        
+        <a class="py-1 pl-3" href="#creating-an-account-for-an-individual">Creating an Account for an Individual</a>
+        
+        <a class="py-1 pl-3" href="#creating-an-account-for-a-business">Creating an Account for a Business</a>
+        
+        <a class="py-1 pl-3" href="#verifying-your-customers">Verifying your Customers</a>
+         
+        <a class="py-1" href="#storing-value">Storing value</a>
+         
+        <a class="py-1" href="#collecting-payments">Collecting Payments</a>
+        
+        <a class="py-1 pl-3" href="#via-deposits-payment-pages">via Deposits Payment pages</a>
+        
+        <a class="py-1 pl-3" href="#via-bank-account">via Bank Account</a>
+        
+        <a class="py-1 pl-3" href="#via-card">via Card</a>
+         
+      </div>
+    </div>
+  </aside>
+</div>
+ 
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

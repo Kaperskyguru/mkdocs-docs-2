@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Welcome to MkDocs - My Docs
+    </title>
+
+    
+<link href="css/style.css" type="text/css" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: "#0f172a",
+          secondary: "#0db9e9",
+          tertiary: "#1e293b",
+        },
+      },
+    },
+  };
+</script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/night-owl.min.css"
+/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>
+  hljs.highlightAll();
+</script>
+  </head>
+  <body>
+    <div class="bg-primary h-full">
+      <div class="mx-auto h-full px-8 xl:px-0" style="max-width: 1320px">
+        <nav
+  class="flex w-full items-center justify-between bg-primary text-white p-3 border-solid border-tertiary border-b"
+  style="max-width: 1320px"
+>
+  <!-- Logo -->
+  <div class="w-32">Logo</div>
+  <!-- Search -->
+  <div
+    class="flex-1 bg-primary flex justify-center mx-5 bg-tertiary rounded-md"
+  >
+    
+    <form action="./search.html" class="w-full">
+      <input
+        type="text"
+        name="q"
+        id="mkdocs-search-query"
+        class="px-5 hidden lg:flex py-2 w-full bg-tertiary border-solid rounded-md border-tertiary border outline-secondary outline-1 ring-0"
+        placeholder="Search deposits docs"
+      />
+    </form>
+    
+  </div>
+  <div class="justify-between gap-10 items-center hidden lg:flex">
+    <div>v0.0.0</div>
+    <div>Icon</div>
+    <div><a href="https://github.com">Github</a></div>
+    <div>
+      <button class="bg-secondary px-4 py-2 rounded-md text-[#212934]">
+        Submit a request
+      </button>
+    </div>
+    <div>
+      <button
+        class="border-secondary border border-outline px-4 py-2 rounded-md text-secondary"
+      >
+        Sign in
+      </button>
+    </div>
+  </div>
+
+  <div class="lg:hidden block" onclick="openSidebar()">
+    <svg
+      focusable="false"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 5H20.359M3 18.186H20.359M3 11.592H20.359"
+        stroke="currentcolor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      ></path>
+    </svg>
+  </div>
+</nav>
+
+        <div class="flex pt-20 relative">
+          <aside
+  id="sidebar"
+  class="w-full hidden w-full lg:block top-[65px] sticky overflow-y-auto border-r-2 border-solid border-tertiary"
+  style="max-width: 250px; height: calc(100vh - 80px); min-width: 280px"
+>
+  <nav class="px-3">
+    <ul id="mainmenu" class="text-white rounded-lg text-lg">
+      <li>
+        <a
+          href="/"
+          class="flex items-center gap-3 px-2 py-3 hover:bg-tertiary rounded-lg"
+        >
+          <div>
+            <img
+              src="https://docs.deposits.dev/assets/svgs/sidebar/docs_home.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <p>Docs Home</p>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-2 py-3 hover:bg-tertiary rounded-lg"
+        >
+          <div>
+            <img
+              src="https://docs.deposits.dev/assets/svgs/sidebar/api_reference.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <p>API References</p>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-2 py-3 hover:bg-tertiary rounded-lg"
+        >
+          <div>
+            <img
+              src="https://docs.deposits.dev/assets/svgs/sidebar/ui_kit.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <p>UI Kit</p>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-2 py-3 hover:bg-tertiary rounded-lg"
+        >
+          <div>
+            <img
+              src="https://docs.deposits.dev/assets/svgs/sidebar/recipes.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <p>Guides</p>
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#"
+          class="flex items-center gap-3 px-2 py-3 hover:bg-tertiary rounded-lg"
+        >
+          <div>
+            <img
+              src="https://docs.deposits.dev/assets/svgs/sidebar/references.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <p>Glossary</p>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="my-8 py-2 text-white">
+    <h2 class="uppercase font-bold text-base">
+      <a href="/getting-started">Getting Started</a>
+    </h2>
+    <div class="flex flex-col text-base">
+      <a href="/getting-started/introduction" class="py-1">Introduction</a>
+      <a href="/getting-started/key-terms" class="py-1">Key Terms</a>
+      <a href="#" class="py-1">Environments</a>
+      <a href="#" class="py-1">Authentication</a>
+      <a href="#" class="py-1">Testing</a>
+      <a href="#" class="py-1">Errors</a>
+    </div>
+  </div>
+
+  <div class="my-8 text-white">
+    <h2 class="uppercase py-2 font-bold text-base">
+      <a href="/services">Services</a>
+    </h2>
+    <div class="flex flex-col text-base">
+      <a href="/services/email-receipts" class="py-1">Email Receipts</a>
+      <a href="#" class="py-1">Webhooks</a>
+    </div>
+  </div>
+
+  <div class="my-8 text-white">
+    <h2 class="uppercase py-2 font-bold text-base">Libraries & SDKs</h2>
+    <div class="flex flex-col text-base">
+      <a href="#" class="py-1">E-Commerce</a>
+      <a href="#" class="py-1">One-Click Pay</a>
+      <a href="#" class="py-1">Payouts</a>
+      <a href="#" class="py-1">Balance</a>
+    </div>
+  </div>
+
+  <div class="text-white">
+    <h2 class="uppercase py-2 font-bold text-base">Use Cases</h2>
+    <div class="flex flex-col text-base">
+      <a href="#" class="py-1">Overview</a>
+      <a href="#" class="py-1">Digital Banking</a>
+      <a href="#" class="py-1">Invoice Management System</a>
+      <a href="#" class="py-1">Donations Engine</a>
+      <a href="#" class="py-1">International Remittance</a>
+      <a href="#" class="py-1">Challenger Bank</a>
+    </div>
+  </div>
+</aside>
+
+          <!-- Include Home -->
+
+          <main
+  class="flex-1 h-full lg:px-8 px-0 pb-8"
+  style="max-width: cal(100% - 280px)"
+>
+  <div class="text-white">
+    <h1 class="text-4xl font-bold py-3">Documentation</h1>
+    <p>Welcome to the documentation!</p>
+  </div>
+  <section>
+    <div class="grid-3">
+      <div class="text-white bg-tertiary rounded-lg">
+        <div class="w-full">
+          <div class="w-full">
+            <img
+              src="https://docs.deposits.dev/assets/svgs/home/services_dark.svg"
+              class="object-cover w-full"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="p-4">
+            <p class="capitalize font-bold text-lg">
+              <a href="#">Getting started</a>
+            </p>
+            <p class="text-md pt-2">
+              Everything you need to get started with Deposits.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-white bg-tertiary rounded-lg">
+        <div>
+          <div class="w-full">
+            <img
+              src="https://docs.deposits.dev/assets/svgs/home/services_dark.svg"
+              class="object-cover w-full"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="p-4">
+            <p class="capitalize font-bold text-lg">
+              <a href="#">API Reference</a>
+            </p>
+            <p class="text-md pt-2">
+              Complete reference documentation for Deposits APIs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="text-white bg-tertiary rounded-lg">
+        <div>
+          <div class="w-full">
+            <img
+              src="https://docs.deposits.dev/assets/svgs/home/services_dark.svg"
+              class="object-cover w-full"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="p-4">
+            <p class="capitalize font-bold text-lg">
+              <a class="hover:text-secondary" href="#">recipes</a>
+            </p>
+            <p class="text-md pt-2">Quick guides to help you build fast.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="text-white">
+      <h1 class="text-4xl font-bold py-3">Explore our APIs</h1>
+      <p>Integrate and build with our suite of APIs</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="text-white bg-tertiary rounded-lg">
+        <div id="nohover" href="#" class="p-4">
+          <a href="#">
+            <div class="flex justify-between">
+              <p class="capitalize font-bold text-lg">Getting started</p>
+              <img
+                src="https://docs.deposits.dev/assets/svgs/home/bank_xs_dark.svg"
+                alt=""
+              />
+            </div>
+            <p class="text-md pt-2 hover:text-white">
+              Everything you need to get started with Deposits.
+            </p>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-white bg-tertiary rounded-lg">
+        <div id="nohover" href="#" class="p-4">
+          <a href="#">
+            <div class="flex justify-between">
+              <p class="capitalize font-bold text-lg">Cards</p>
+              <img
+                src="https://docs.deposits.dev/assets/svgs/home/bank_xs_dark.svg"
+                alt=""
+              />
+            </div>
+            <p class="text-md pt-2 hover:text-white">
+              Virtual and physical card management.
+            </p>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-white bg-tertiary rounded-lg">
+        <div id="nohover" href="#" class="p-4">
+          <a href="#">
+            <div class="flex justify-between">
+              <p class="capitalize font-bold text-lg">Invoice</p>
+              <img
+                src="https://docs.deposits.dev/assets/svgs/home/bank_xs_dark.svg"
+                alt=""
+              />
+            </div>
+            <p class="text-md pt-2 hover:text-white">
+              Invoice creation, distribution and payment management.
+            </p>
+          </a>
+        </div>
+      </div>
+
+      <div class="text-white bg-tertiary rounded-lg">
+        <div id="nohover" href="#" class="p-4">
+          <a href="#">
+            <div class="flex justify-between">
+              <p class="capitalize font-bold text-lg">Wallet</p>
+              <img
+                src="https://docs.deposits.dev/assets/svgs/home/bank_xs_dark.svg"
+                alt=""
+              />
+            </div>
+            <p class="text-md pt-2 hover:text-white">
+              Closed or open loop multicurrency wallets.
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="text-white">
+      <h1 class="text-4xl font-bold py-3">
+        Quick recipes to have you up and running
+      </h1>
+      <p>Quick start with easy to use guides.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="text-white bg-tertiary rounded-lg">
+        <div>
+          <div class="w-full">
+            <img
+              src="https://docs.deposits.dev/assets/svgs/home/donations_use_case_dark.svg"
+              class="w-full"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="p-4">
+            <p class="capitalize font-bold text-lg">
+              <a href="#">Donations use case</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-white bg-tertiary rounded-lg">
+        <div>
+          <div class="w-full h-full">
+            <img
+              src="https://docs.deposits.dev/assets/svgs/home/invoice_management_system_dark.svg"
+              class="w-full"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class="p-4">
+            <p class="capitalize font-bold text-lg">
+              <a href="#">Invoice management system </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
